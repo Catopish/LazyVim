@@ -11,6 +11,9 @@ return {
   config = function()
     require("oil").setup({
       delete_to_trash = true,
+      win_options = {
+        signcolumn = "yes:2",
+      },
     })
   end,
 }

@@ -1,12 +1,11 @@
-vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 return {
   "stevearc/oil.nvim",
   opts = {},
   -- Optional dependencies
   dependencies = { { "echasnovski/mini.icons", opts = {} } },
   keys = {
-    { "<leader>oo", "<cmd>Oil<cr>", desc = "Oil" },
-    { "<leader>of", "<cmd>Oil --float<cr>", desc = "Oil float" },
+    { "<leader>o", "<cmd>Oil<cr>", desc = "Oil" },
   },
   config = function()
     require("oil").setup({
@@ -14,6 +13,9 @@ return {
       win_options = {
         signcolumn = "yes:2",
       },
+      skip_confirm_for_simple_edits = true,
+      prompt_save_on_select_new_entry = false,
+      default_file_explorer = true,
     })
   end,
 }

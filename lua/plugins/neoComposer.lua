@@ -1,5 +1,5 @@
 return {
-  "ecthelionvi/NeoComposer.nvim",
-  dependencies = { "kkharji/sqlite.lua" },
-  opts = {},
+  --   "ecthelionvi/NeoComposer.nvim",
+  --   dependencies = { "kkharji/sqlite.lua" },
+  --   opts = {},
 }
